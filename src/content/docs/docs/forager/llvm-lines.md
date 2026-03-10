@@ -1,6 +1,6 @@
 ---
 title: "llvm-lines"
-description: Forager plugin that counts LLVM IR lines via cargo-llvm-lines.
+description: Tool that counts LLVM IR lines via cargo-llvm-lines.
 ---
 
 Counts LLVM IR lines using [`cargo-llvm-lines`](https://github.com/dtolnay/cargo-llvm-lines).
@@ -14,7 +14,7 @@ cargo install cargo-llvm-lines
 
 ## Inputs
 
-None. The forager runs `cargo llvm-lines` in the project root.
+None. Runs `cargo llvm-lines` in the project root.
 
 ## Example
 
@@ -41,5 +41,5 @@ forager = "llvm-lines"
 }
 ```
 
-Anthill renders `count` measurements as a bar chart across commits.
+The dashboard renders `count` measurements as a bar chart across commits.
 The detail list shows the top functions by line count (up to 50 entries).

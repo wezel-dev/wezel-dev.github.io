@@ -1,11 +1,11 @@
 ---
 title: "exec"
-description: Forager plugin that runs a shell command with no measurement output.
+description: Tool that runs a shell command with no measurement output.
 ---
 
 Runs a shell command. Produces no measurement — use it for build steps that set up repo state for a later measurement step.
 
-`exec` is the default forager: if a step has a `cmd` field and no `forager` field, it runs with `exec`.
+`exec` is the default tool: if a step has a `cmd` field and no `tool` field, it runs with `exec`.
 
 ## Inputs
 

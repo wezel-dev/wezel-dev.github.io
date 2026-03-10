@@ -9,16 +9,16 @@ Wezel is fully self-hostable. Every component is MIT-licensed and designed to ru
 
 | Component | Role |
 |-----------|------|
-| **Burrow** | Backend API and data store. Ingests build events, serves history. |
-| **Anthill** | Web dashboard. Visualizes scenarios, trends, and regressions. |
-| **Pheromone** | Local agent. Hooks into your shell and captures build invocations. |
-| **Forager** | CI scenario runner. Benchmarks defined scenarios on every commit. |
+| **API server** | Backend API and data store. Ingests build events, serves history. |
+| **Dashboard** | Web UI. Visualizes observations, trends, and regressions. |
+| **Local build agent** | Hooks into your shell and captures build invocations. |
+| **Benchmark runner** | CLI tool for running benchmarks against commits in CI. |
 
 ## Prerequisites
 
 - Docker and Docker Compose (v2+)
 - A Linux host with at least 1 GB RAM
-- Outbound network access from your CI runners to Burrow
+- Outbound network access from your CI runners to the API server
 
 ## Deployment options
 
@@ -29,6 +29,8 @@ The quickest way to get started. See the [Docker Compose guide](/docs/self-hosti
 ### Custom
 
 Each component is a standalone binary or container image. You can run them behind your own reverse proxy and connect them to an existing Postgres instance.
+
+For internal component names and architecture details, see [Architecture](/docs/developing/architecture).
 
 ## Data
 

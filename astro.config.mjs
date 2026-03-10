@@ -34,6 +34,10 @@ export default defineConfig({
           label: "Forager",
           autogenerate: { directory: "docs/forager" },
         },
+        {
+          label: "Developing Wezel",
+          autogenerate: { directory: "docs/developing" },
+        },
       ],
       customCss: [],
     }),
